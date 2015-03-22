@@ -34,10 +34,6 @@ class CurrentLocation: NSObject, CLLocationManagerDelegate {
         currentLatitude = location.coordinate.latitude
         currentLongitude = location.coordinate.longitude
         
-//        self.locationManager.stopUpdatingLocation()
-//        
-//        self.getAndDisplayLocationStringForLocation(location)
-        
     }
     func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
         CLGeocoder().reverseGeocodeLocation(manager.location, completionHandler: { (placemarks, error) -> Void in

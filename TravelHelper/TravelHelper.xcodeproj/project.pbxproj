@@ -15,6 +15,9 @@
 		A73381991ABDAAC500FBE585 /* TravelHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73381981ABDAAC500FBE585 /* TravelHelperTests.swift */; };
 		A73381A31ABDB08C00FBE585 /* Artwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73381A21ABDB08C00FBE585 /* Artwork.swift */; };
 		A73381A71ABDC8DB00FBE585 /* CurrentLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73381A61ABDC8DB00FBE585 /* CurrentLocation.swift */; };
+		A762E5931ABE612A00B53777 /* VCMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A762E5921ABE612A00B53777 /* VCMapView.swift */; };
+		A7C7B1931ABEA26B00566D7D /* bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A7C7B1921ABEA26B00566D7D /* bg.jpg */; };
+		A7C7B1951ABEA2FE00566D7D /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C7B1941ABEA2FE00566D7D /* MainVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,9 @@
 		A73381981ABDAAC500FBE585 /* TravelHelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelHelperTests.swift; sourceTree = "<group>"; };
 		A73381A21ABDB08C00FBE585 /* Artwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Artwork.swift; sourceTree = "<group>"; };
 		A73381A61ABDC8DB00FBE585 /* CurrentLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentLocation.swift; sourceTree = "<group>"; };
+		A762E5921ABE612A00B53777 /* VCMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCMapView.swift; sourceTree = "<group>"; };
+		A7C7B1921ABEA26B00566D7D /* bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg.jpg; sourceTree = "<group>"; };
+		A7C7B1941ABEA2FE00566D7D /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,9 +92,12 @@
 				A73381861ABDAAC500FBE585 /* Main.storyboard */,
 				A73381891ABDAAC500FBE585 /* Images.xcassets */,
 				A733818B1ABDAAC500FBE585 /* LaunchScreen.xib */,
+				A7C7B1911ABEA24C00566D7D /* img */,
 				A73381801ABDAAC500FBE585 /* Supporting Files */,
 				A73381A21ABDB08C00FBE585 /* Artwork.swift */,
 				A73381A61ABDC8DB00FBE585 /* CurrentLocation.swift */,
+				A762E5921ABE612A00B53777 /* VCMapView.swift */,
+				A7C7B1941ABEA2FE00566D7D /* MainVC.swift */,
 			);
 			path = TravelHelper;
 			sourceTree = "<group>";
@@ -116,6 +125,14 @@
 				A73381971ABDAAC500FBE585 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A7C7B1911ABEA24C00566D7D /* img */ = {
+			isa = PBXGroup;
+			children = (
+				A7C7B1921ABEA26B00566D7D /* bg.jpg */,
+			);
+			name = img;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,6 +217,7 @@
 			files = (
 				A73381881ABDAAC500FBE585 /* Main.storyboard in Resources */,
 				A733818D1ABDAAC500FBE585 /* LaunchScreen.xib in Resources */,
+				A7C7B1931ABEA26B00566D7D /* bg.jpg in Resources */,
 				A733818A1ABDAAC500FBE585 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -219,7 +237,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A73381A71ABDC8DB00FBE585 /* CurrentLocation.swift in Sources */,
+				A7C7B1951ABEA2FE00566D7D /* MainVC.swift in Sources */,
 				A73381851ABDAAC500FBE585 /* ViewController.swift in Sources */,
+				A762E5931ABE612A00B53777 /* VCMapView.swift in Sources */,
 				A73381A31ABDB08C00FBE585 /* Artwork.swift in Sources */,
 				A73381831ABDAAC500FBE585 /* AppDelegate.swift in Sources */,
 			);
@@ -415,6 +435,7 @@
 				A733819E1ABDAAC500FBE585 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A733819F1ABDAAC500FBE585 /* Build configuration list for PBXNativeTarget "TravelHelperTests" */ = {
 			isa = XCConfigurationList;
@@ -423,6 +444,7 @@
 				A73381A11ABDAAC500FBE585 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

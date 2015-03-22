@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TravelHelper/CurrentLocation.swift"
-            timestampString = "448649774.043403"
+            timestampString = "448679882.480664"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "104"
-            endingLineNumber = "104"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
             landmarkName = "CurrentLocation"
             landmarkType = "3">
          </BreakpointContent>

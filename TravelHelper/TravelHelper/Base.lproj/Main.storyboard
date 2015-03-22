@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
@@ -20,6 +20,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <items>
                                     <barButtonItem systemItem="refresh" id="ScE-Sa-eYL"/>
+                                    <barButtonItem width="133" style="plain" systemItem="fixedSpace" id="fD8-I8-9LJ"/>
+                                    <barButtonItem systemItem="add" id="j0B-MR-7fN"/>
+                                    <barButtonItem width="136" style="plain" systemItem="fixedSpace" id="off-Iz-LZ1"/>
+                                    <barButtonItem systemItem="bookmarks" id="gSm-Zz-IoH"/>
                                 </items>
                             </toolbar>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="qbv-vb-MPA">
@@ -28,12 +32,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="qbv-vb-MPA" firstAttribute="trailing" secondItem="Eb7-us-Wha" secondAttribute="trailing" id="1af-UM-Ix0"/>
-                            <constraint firstItem="Eb7-us-Wha" firstAttribute="leading" secondItem="qbv-vb-MPA" secondAttribute="leading" id="Cpl-EK-hyt"/>
-                            <constraint firstItem="Eb7-us-Wha" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="aQu-Ol-i46"/>
+                            <constraint firstItem="Eb7-us-Wha" firstAttribute="trailing" secondItem="qbv-vb-MPA" secondAttribute="trailing" id="5R3-ht-LGC"/>
+                            <constraint firstItem="Eb7-us-Wha" firstAttribute="top" secondItem="qbv-vb-MPA" secondAttribute="bottom" id="Qw0-at-xBI"/>
+                            <constraint firstItem="Eb7-us-Wha" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="SUM-u1-TDJ"/>
+                            <constraint firstItem="Eb7-us-Wha" firstAttribute="centerX" secondItem="qbv-vb-MPA" secondAttribute="centerX" id="dTI-Jd-UYI"/>
                             <constraint firstAttribute="trailing" secondItem="qbv-vb-MPA" secondAttribute="trailing" id="hlJ-U0-8We"/>
-                            <constraint firstItem="Eb7-us-Wha" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="ktt-4t-nMM"/>
-                            <constraint firstItem="Eb7-us-Wha" firstAttribute="top" secondItem="qbv-vb-MPA" secondAttribute="bottom" id="p1J-ss-UQC"/>
+                            <constraint firstItem="Eb7-us-Wha" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="k1r-x8-D0V"/>
+                            <constraint firstItem="Eb7-us-Wha" firstAttribute="leading" secondItem="qbv-vb-MPA" secondAttribute="leading" id="upY-EW-2cn"/>
                             <constraint firstItem="qbv-vb-MPA" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="xzE-cG-ELD"/>
                         </constraints>
                         <variation key="default">
@@ -42,13 +47,14 @@
                                 <exclude reference="qbv-vb-MPA"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="1af-UM-Ix0"/>
+                                <exclude reference="5R3-ht-LGC"/>
+                                <exclude reference="Qw0-at-xBI"/>
+                                <exclude reference="SUM-u1-TDJ"/>
+                                <exclude reference="dTI-Jd-UYI"/>
+                                <exclude reference="k1r-x8-D0V"/>
+                                <exclude reference="upY-EW-2cn"/>
                                 <exclude reference="hlJ-U0-8We"/>
                                 <exclude reference="xzE-cG-ELD"/>
-                                <exclude reference="Cpl-EK-hyt"/>
-                                <exclude reference="aQu-Ol-i46"/>
-                                <exclude reference="ktt-4t-nMM"/>
-                                <exclude reference="p1J-ss-UQC"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -57,23 +63,45 @@
                                 <include reference="qbv-vb-MPA"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="1af-UM-Ix0"/>
+                                <include reference="5R3-ht-LGC"/>
+                                <include reference="Qw0-at-xBI"/>
+                                <include reference="SUM-u1-TDJ"/>
+                                <include reference="dTI-Jd-UYI"/>
+                                <include reference="k1r-x8-D0V"/>
+                                <include reference="upY-EW-2cn"/>
                                 <include reference="hlJ-U0-8We"/>
                                 <include reference="xzE-cG-ELD"/>
-                                <include reference="Cpl-EK-hyt"/>
-                                <include reference="aQu-Ol-i46"/>
-                                <include reference="ktt-4t-nMM"/>
-                                <include reference="p1J-ss-UQC"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="addBtn" destination="j0B-MR-7fN" id="FVM-3T-VDG"/>
                         <outlet property="mapView" destination="qbv-vb-MPA" id="Tur-uN-Oc6"/>
+                        <outlet property="openBtn" destination="gSm-Zz-IoH" id="vmJ-UA-bzJ"/>
                         <outlet property="refreshBtn" destination="ScE-Sa-eYL" id="SvC-dX-Ypn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="843" y="204"/>
+        </scene>
+        <!--MainVC-->
+        <scene sceneID="vw8-eR-o4o">
+            <objects>
+                <viewController id="b4f-nL-Fdh" customClass="MainVC" customModule="TravelHelper" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BsV-oC-Qxq"/>
+                        <viewControllerLayoutGuide type="bottom" id="M0t-7Y-bNb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nPt-zx-eON">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.71999999999999997" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Bh-qd-sym" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1620" y="204"/>
         </scene>
     </scenes>
 </document>

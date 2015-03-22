@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
    LastUpgradeVersion = "0610"
-   version = "1.7">
+   version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A733817C1ABDAAC500FBE585"
-               BuildableName = "TravelHelper.app"
-               BlueprintName = "TravelHelper"
-               ReferencedContainer = "container:TravelHelper.xcodeproj">
+               BlueprintIdentifier = "A7C7B19E1ABEA79C00566D7D"
+               BuildableName = "Travel Helper.app"
+               BlueprintName = "Travel Helper"
+               ReferencedContainer = "container:Travel Helper.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -28,10 +28,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A73381911ABDAAC500FBE585"
-               BuildableName = "TravelHelperTests.xctest"
-               BlueprintName = "TravelHelperTests"
-               ReferencedContainer = "container:TravelHelper.xcodeproj">
+               BlueprintIdentifier = "A7C7B1B31ABEA79C00566D7D"
+               BuildableName = "Travel HelperTests.xctest"
+               BlueprintName = "Travel HelperTests"
+               ReferencedContainer = "container:Travel Helper.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -46,20 +46,20 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A73381911ABDAAC500FBE585"
-               BuildableName = "TravelHelperTests.xctest"
-               BlueprintName = "TravelHelperTests"
-               ReferencedContainer = "container:TravelHelper.xcodeproj">
+               BlueprintIdentifier = "A7C7B1B31ABEA79C00566D7D"
+               BuildableName = "Travel HelperTests.xctest"
+               BlueprintName = "Travel HelperTests"
+               ReferencedContainer = "container:Travel Helper.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A733817C1ABDAAC500FBE585"
-            BuildableName = "TravelHelper.app"
-            BlueprintName = "TravelHelper"
-            ReferencedContainer = "container:TravelHelper.xcodeproj">
+            BlueprintIdentifier = "A7C7B19E1ABEA79C00566D7D"
+            BuildableName = "Travel Helper.app"
+            BlueprintName = "Travel Helper"
+            ReferencedContainer = "container:Travel Helper.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -75,18 +75,14 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A733817C1ABDAAC500FBE585"
-            BuildableName = "TravelHelper.app"
-            BlueprintName = "TravelHelper"
-            ReferencedContainer = "container:TravelHelper.xcodeproj">
+            BlueprintIdentifier = "A7C7B19E1ABEA79C00566D7D"
+            BuildableName = "Travel Helper.app"
+            BlueprintName = "Travel Helper"
+            ReferencedContainer = "container:Travel Helper.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
-      <LocationScenarioReference
-         identifier = "New York, NY, USA"
-         referenceType = "1">
-      </LocationScenarioReference>
    </LaunchAction>
    <ProfileAction
       shouldUseLaunchSchemeArgsEnv = "YES"
@@ -97,10 +93,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A733817C1ABDAAC500FBE585"
-            BuildableName = "TravelHelper.app"
-            BlueprintName = "TravelHelper"
-            ReferencedContainer = "container:TravelHelper.xcodeproj">
+            BlueprintIdentifier = "A7C7B19E1ABEA79C00566D7D"
+            BuildableName = "Travel Helper.app"
+            BlueprintName = "Travel Helper"
+            ReferencedContainer = "container:Travel Helper.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
