@@ -23,6 +23,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view, typically from a nib.
         
         let screenBound = UIScreen.mainScreen().bounds
@@ -56,8 +57,13 @@ class ViewController: UIViewController {
         
     }
     
+    override func prefersStatusBarHidden() -> Bool {
+        return true;
+    }
+    
     func letGo(){
         println("Call MainVC")
+        self.performSegueWithIdentifier("letGoSegue", sender: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -163,7 +169,7 @@ class ViewController: UIViewController {
 
         imgViewLogo.transform = CGAffineTransformMakeScale(0.1, 0.1)
         
-        UIView.animateWithDuration(2.0,
+        UIView.animateWithDuration(1.0,
             delay: 0,
             usingSpringWithDamping: CGFloat(0.2),
             initialSpringVelocity: CGFloat(6.0),
@@ -188,7 +194,7 @@ class ViewController: UIViewController {
         btnGo1.hidden = false
         btnGo1.transform = CGAffineTransformMakeScale(0.0, 0.0)
         
-        UIView.animateWithDuration(3.0,
+        UIView.animateWithDuration(2.0,
             delay: 0,
             usingSpringWithDamping: CGFloat(0.2),
             initialSpringVelocity: CGFloat(6.0),

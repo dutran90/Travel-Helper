@@ -10,5 +10,7 @@
 #define Travel_Helper_Travel_Helper_Bridging_Header_h
 
 #import "AYVibrantButton.h"
+#import "FXBlurView.h"
+#import "UIView+Genie.h"
 
 #endif

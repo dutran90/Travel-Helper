@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A7071F6B1AC1204800E725D6 /* UIView+Genie.m in Sources */ = {isa = PBXBuildFile; fileRef = A7071F6A1AC1204800E725D6 /* UIView+Genie.m */; };
+		A75C9B081AC070D200046BE5 /* yourTrip.png in Resources */ = {isa = PBXBuildFile; fileRef = A75C9B071AC070D200046BE5 /* yourTrip.png */; };
+		A766EE8E1AC1454E0079F685 /* DetailTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A766EE8D1AC1454E0079F685 /* DetailTabView.swift */; };
+		A766EE901AC145D40079F685 /* InfoTabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A766EE8F1AC145D40079F685 /* InfoTabItem.swift */; };
+		A766EE921AC145E80079F685 /* MusicTabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A766EE911AC145E80079F685 /* MusicTabItem.swift */; };
+		A766EE941AC145F90079F685 /* HelpTabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A766EE931AC145F90079F685 /* HelpTabItem.swift */; };
+		A766EE981AC150180079F685 /* Opened Folder Filled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = A766EE951AC150180079F685 /* Opened Folder Filled-50.png */; };
+		A766EE991AC150180079F685 /* Music-50.png in Resources */ = {isa = PBXBuildFile; fileRef = A766EE961AC150180079F685 /* Music-50.png */; };
+		A766EE9A1AC150180079F685 /* Home-50.png in Resources */ = {isa = PBXBuildFile; fileRef = A766EE971AC150180079F685 /* Home-50.png */; };
+		A7928C7A1AC05FD900205D72 /* FXBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7928C791AC05FD900205D72 /* FXBlurView.m */; };
+		A7C28BDA1ABFF46D0091CF0F /* TripCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C28BD91ABFF46D0091CF0F /* TripCell.swift */; };
+		A7C28BDC1ABFFDCB0091CF0F /* trip.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A7C28BDB1ABFFDCB0091CF0F /* trip.jpg */; };
+		A7C28BDE1ABFFEB90091CF0F /* close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A7C28BDD1ABFFEB90091CF0F /* close@2x.png */; };
+		A7C48AB01ABEDF3A00C01A47 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C48AAF1ABEDF3A00C01A47 /* MainVC.swift */; };
 		A7C7B1A51ABEA79C00566D7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C7B1A41ABEA79C00566D7D /* AppDelegate.swift */; };
 		A7C7B1A71ABEA79C00566D7D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C7B1A61ABEA79C00566D7D /* ViewController.swift */; };
 		A7C7B1AA1ABEA79C00566D7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7C7B1A81ABEA79C00566D7D /* Main.storyboard */; };
@@ -32,6 +46,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A7071F691AC1204800E725D6 /* UIView+Genie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Genie.h"; sourceTree = "<group>"; };
+		A7071F6A1AC1204800E725D6 /* UIView+Genie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Genie.m"; sourceTree = "<group>"; };
+		A75C9B071AC070D200046BE5 /* yourTrip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yourTrip.png; sourceTree = "<group>"; };
+		A766EE8D1AC1454E0079F685 /* DetailTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailTabView.swift; sourceTree = "<group>"; };
+		A766EE8F1AC145D40079F685 /* InfoTabItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoTabItem.swift; sourceTree = "<group>"; };
+		A766EE911AC145E80079F685 /* MusicTabItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicTabItem.swift; sourceTree = "<group>"; };
+		A766EE931AC145F90079F685 /* HelpTabItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpTabItem.swift; sourceTree = "<group>"; };
+		A766EE951AC150180079F685 /* Opened Folder Filled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Opened Folder Filled-50.png"; sourceTree = "<group>"; };
+		A766EE961AC150180079F685 /* Music-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Music-50.png"; sourceTree = "<group>"; };
+		A766EE971AC150180079F685 /* Home-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Home-50.png"; sourceTree = "<group>"; };
+		A7928C781AC05FD900205D72 /* FXBlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXBlurView.h; sourceTree = "<group>"; };
+		A7928C791AC05FD900205D72 /* FXBlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXBlurView.m; sourceTree = "<group>"; };
+		A7C28BD91ABFF46D0091CF0F /* TripCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripCell.swift; sourceTree = "<group>"; };
+		A7C28BDB1ABFFDCB0091CF0F /* trip.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = trip.jpg; sourceTree = "<group>"; };
+		A7C28BDD1ABFFEB90091CF0F /* close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "close@2x.png"; sourceTree = "<group>"; };
+		A7C48AAF1ABEDF3A00C01A47 /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		A7C7B19F1ABEA79C00566D7D /* Travel Helper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Travel Helper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7C7B1A31ABEA79C00566D7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A7C7B1A41ABEA79C00566D7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +123,12 @@
 			children = (
 				A7C7B1A41ABEA79C00566D7D /* AppDelegate.swift */,
 				A7C7B1A61ABEA79C00566D7D /* ViewController.swift */,
+				A7C48AAF1ABEDF3A00C01A47 /* MainVC.swift */,
+				A7C28BD91ABFF46D0091CF0F /* TripCell.swift */,
+				A766EE8D1AC1454E0079F685 /* DetailTabView.swift */,
+				A766EE8F1AC145D40079F685 /* InfoTabItem.swift */,
+				A766EE911AC145E80079F685 /* MusicTabItem.swift */,
+				A766EE931AC145F90079F685 /* HelpTabItem.swift */,
 				A7C7B1A81ABEA79C00566D7D /* Main.storyboard */,
 				A7C7B1AB1ABEA79C00566D7D /* Images.xcassets */,
 				A7C7B1AD1ABEA79C00566D7D /* LaunchScreen.xib */,
@@ -105,6 +141,10 @@
 		A7C7B1A21ABEA79C00566D7D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A7071F691AC1204800E725D6 /* UIView+Genie.h */,
+				A7071F6A1AC1204800E725D6 /* UIView+Genie.m */,
+				A7928C781AC05FD900205D72 /* FXBlurView.h */,
+				A7928C791AC05FD900205D72 /* FXBlurView.m */,
 				A7C7B1D11ABEC53F00566D7D /* AYVibrantButton.h */,
 				A7C7B1D21ABEC53F00566D7D /* AYVibrantButton.m */,
 				A7C7B1C91ABEAD2D00566D7D /* RBResizer.swift */,
@@ -134,6 +174,12 @@
 		A7C7B1C41ABEA82600566D7D /* img */ = {
 			isa = PBXGroup;
 			children = (
+				A766EE951AC150180079F685 /* Opened Folder Filled-50.png */,
+				A766EE961AC150180079F685 /* Music-50.png */,
+				A766EE971AC150180079F685 /* Home-50.png */,
+				A75C9B071AC070D200046BE5 /* yourTrip.png */,
+				A7C28BDD1ABFFEB90091CF0F /* close@2x.png */,
+				A7C28BDB1ABFFDCB0091CF0F /* trip.jpg */,
 				A7C7B1CD1ABEB33000566D7D /* Right Footprint Filled-50.png */,
 				A7C7B1CE1ABEB33000566D7D /* Left Footprint Filled-50.png */,
 				A7C7B1CB1ABEB04900566D7D /* logo.png */,
@@ -222,13 +268,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7C28BDE1ABFFEB90091CF0F /* close@2x.png in Resources */,
 				A7C7B1D01ABEB33000566D7D /* Left Footprint Filled-50.png in Resources */,
 				A7C7B1AA1ABEA79C00566D7D /* Main.storyboard in Resources */,
 				A7C7B1AF1ABEA79C00566D7D /* LaunchScreen.xib in Resources */,
 				A7C7B1CC1ABEB04900566D7D /* logo.png in Resources */,
 				A7C7B1C81ABEAA1700566D7D /* bg_ip6.jpg in Resources */,
+				A766EE9A1AC150180079F685 /* Home-50.png in Resources */,
+				A766EE991AC150180079F685 /* Music-50.png in Resources */,
+				A766EE981AC150180079F685 /* Opened Folder Filled-50.png in Resources */,
 				A7C7B1AC1ABEA79C00566D7D /* Images.xcassets in Resources */,
+				A7C28BDC1ABFFDCB0091CF0F /* trip.jpg in Resources */,
 				A7C7B1CF1ABEB33000566D7D /* Right Footprint Filled-50.png in Resources */,
+				A75C9B081AC070D200046BE5 /* yourTrip.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,8 +299,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7C7B1D31ABEC53F00566D7D /* AYVibrantButton.m in Sources */,
+				A7C48AB01ABEDF3A00C01A47 /* MainVC.swift in Sources */,
+				A766EE8E1AC1454E0079F685 /* DetailTabView.swift in Sources */,
+				A766EE941AC145F90079F685 /* HelpTabItem.swift in Sources */,
+				A7928C7A1AC05FD900205D72 /* FXBlurView.m in Sources */,
+				A766EE901AC145D40079F685 /* InfoTabItem.swift in Sources */,
 				A7C7B1A71ABEA79C00566D7D /* ViewController.swift in Sources */,
+				A766EE921AC145E80079F685 /* MusicTabItem.swift in Sources */,
 				A7C7B1CA1ABEAD2D00566D7D /* RBResizer.swift in Sources */,
+				A7071F6B1AC1204800E725D6 /* UIView+Genie.m in Sources */,
+				A7C28BDA1ABFF46D0091CF0F /* TripCell.swift in Sources */,
 				A7C7B1A51ABEA79C00566D7D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -445,6 +505,7 @@
 				A7C7B1C01ABEA79C00566D7D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A7C7B1C11ABEA79C00566D7D /* Build configuration list for PBXNativeTarget "Travel HelperTests" */ = {
 			isa = XCConfigurationList;
@@ -453,6 +514,7 @@
 				A7C7B1C31ABEA79C00566D7D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
