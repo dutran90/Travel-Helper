@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import SystemConfiguration
 
 class MainVC: UICollectionViewController {
     
@@ -32,7 +33,7 @@ class MainVC: UICollectionViewController {
         
         self.view.backgroundColor = UIColor(patternImage: imgView)
     
-        navItemTrip.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Add, target: nil, action: nil)
+        navItemTrip.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Add, target: self, action: "callSegueAdd")
         navItemTrip.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Action, target: self, action: "EditTripPressed")
         
         let sizeWidth = self.navigationController?.navigationBar.frame.size.width
@@ -159,7 +160,7 @@ class MainVC: UICollectionViewController {
         if isClose == false {
             cell.CloseImage?.hidden = true
             cell.transform = CGAffineTransformMakeRotation(0)
-            let gesture = UITapGestureRecognizer(target: self, action: "callSegue")
+            let gesture = UITapGestureRecognizer(target: self, action: "callSegueDetail")
             cell.lbNameTrip.userInteractionEnabled = true
             cell.lbNameTrip.addGestureRecognizer(gesture)
         } else {
@@ -192,12 +193,60 @@ class MainVC: UICollectionViewController {
         self.flyToTrash(cell)
     }
     
-    func callSegue(){
+    func callSegueDetail(){
         self.performSegueWithIdentifier("tripDetailSegue", sender: 1)
     }
     
+    func callSegueAdd(){
+        
+        //check internet before add new
+        func isConnectedToNetwork() -> Bool {
+            
+            var zeroAddress = sockaddr_in(sin_len: 0, sin_family: 0, sin_port: 0, sin_addr: in_addr(s_addr: 0), sin_zero: (0, 0, 0, 0, 0, 0, 0, 0))
+            zeroAddress.sin_len = UInt8(sizeofValue(zeroAddress))
+            zeroAddress.sin_family = sa_family_t(AF_INET)
+            
+            let defaultRouteReachability = withUnsafePointer(&zeroAddress) {
+                SCNetworkReachabilityCreateWithAddress(nil, UnsafePointer($0)).takeRetainedValue()
+            }
+            
+            var flags: SCNetworkReachabilityFlags = 0
+            if SCNetworkReachabilityGetFlags(defaultRouteReachability, &flags) == 0 {
+                return false
+            }
+            
+            let isReachable = (flags & UInt32(kSCNetworkFlagsReachable)) != 0
+            let needsConnection = (flags & UInt32(kSCNetworkFlagsConnectionRequired)) != 0
+            
+            return (isReachable && !needsConnection) ? true : false
+        }
+        
+        if isConnectedToNetwork(){
+            self.performSegueWithIdentifier("tripDetailSegue", sender: 0)
+        }else{
+            let alertController = UIAlertController(title: "Please connect internet!", message:
+                nil, preferredStyle: UIAlertControllerStyle.Alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default,handler: nil))
+            
+            self.presentViewController(alertController, animated: true, completion: nil)
+        }
+        
+
+    }
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "tripDetailSegue"{
+        if segue.identifier == "tripDetailSegue" && sender?.integerValue == 1{
+        
+            print("View your detail trip")
+        
+        
+        }else{
+            print("Add new trip!")
+            
+            let detail = segue.destinationViewController as DetailTabView
+            
+            detail.checkNew = true
+            
         }
     }
     

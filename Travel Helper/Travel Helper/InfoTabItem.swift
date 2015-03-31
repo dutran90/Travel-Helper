@@ -23,7 +23,8 @@ class InfoTabItem: UIViewController {
         
         self.view.backgroundColor = UIColor(patternImage: imgView)
         
-        
+        let a = DetailTabView()
+        print(a.checkNew)
         
         
     }

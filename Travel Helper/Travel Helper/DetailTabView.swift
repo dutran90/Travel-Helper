@@ -11,10 +11,13 @@ import UIKit
 
 class DetailTabView: UITabBarController, UITabBarControllerDelegate {
     @IBOutlet weak var tbDetail: UITabBar!
+    
+    var checkNew : Bool?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.delegate = self
-        let item = self.tbDetail.items as [UITabBarItem]
+//        self.delegate = self
+        var item = tbDetail.items as [UITabBarItem]
         
         let y = self.tbDetail.frame.height
         item[0].image = RBResizeImage(UIImage(named:"Home-50.png")!, CGSize(width: y-10, height: y-10))
