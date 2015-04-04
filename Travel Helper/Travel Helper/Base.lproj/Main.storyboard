@@ -194,7 +194,7 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JvJ-0X-eDZ">
                                             <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                             <fontDescription key="fontDescription" name="SnellRoundhand-Bold" family="Snell Roundhand" pointSize="24"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                             <variation key="widthClass=compact" fixedFrame="YES">
                                                 <rect key="frame" x="8" y="448" width="283" height="55"/>
@@ -237,11 +237,80 @@
                         <outlet property="cvTrip" destination="FAc-2r-w1H" id="apf-kZ-0Jm"/>
                         <outlet property="navItemTrip" destination="pQa-jh-G08" id="9w8-FN-Xj1"/>
                         <segue destination="SZu-p6-gwZ" kind="show" identifier="tripDetailSegue" id="2OU-Sf-ZwO"/>
+                        <segue destination="vN6-f8-9Eo" kind="show" identifier="addTripSegue" id="eRv-KS-Vgz"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GYz-dw-Dnv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2142" y="31"/>
+            <point key="canvasLocation" x="2042" y="-41"/>
+        </scene>
+        <!--Add Trip-->
+        <scene sceneID="FbY-VC-gAp">
+            <objects>
+                <viewController id="vN6-f8-9Eo" customClass="AddTrip" customModule="Travel_Helper" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7J0-JT-A9g"/>
+                        <viewControllerLayoutGuide type="bottom" id="kgE-Pw-BeN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2QI-ZY-xZY">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ms8-eY-Vo0">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="699"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="mkTrip" destination="ms8-eY-Vo0" id="Yz1-sx-t7F"/>
+                        <segue destination="PCz-g8-fzd" kind="show" identifier="addTripSegue1" id="ryI-IS-mtc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ibq-tt-AbD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2417" y="708"/>
+        </scene>
+        <!--Add Trip1-->
+        <scene sceneID="JyT-Hm-5Tj">
+            <objects>
+                <viewController id="PCz-g8-fzd" customClass="AddTrip1" customModule="Travel_Helper" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4DW-S6-vdZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="lgj-sE-rlj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VWF-zE-82t">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <segue destination="bMV-oY-rx4" kind="show" identifier="addTripSegue2" id="CUt-Tn-foK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ULA-El-FoA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2495" y="1451"/>
+        </scene>
+        <!--Add Trip2-->
+        <scene sceneID="kHu-KV-wDC">
+            <objects>
+                <viewController id="bMV-oY-rx4" customClass="AddTrip2" customModule="Travel_Helper" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HlW-at-vmO"/>
+                        <viewControllerLayoutGuide type="bottom" id="6ej-U8-jez"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FK3-v3-cq8">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="It6-xv-x2V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3241" y="1451"/>
         </scene>
         <!--Music Tab Item-->
         <scene sceneID="Thy-jh-nJh">
@@ -303,7 +372,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <outlet property="tbDetail" destination="Dsg-36-x97" id="TjL-TD-uNG"/>
+                        <outlet property="tbDetail" destination="Dsg-36-x97" id="MLH-bB-cAO"/>
                         <segue destination="viY-5K-WmA" kind="relationship" relationship="viewControllers" id="2Re-KO-NK8"/>
                         <segue destination="wy1-pU-apt" kind="relationship" relationship="viewControllers" id="KUL-uB-87k"/>
                         <segue destination="li0-Ip-XX6" kind="relationship" relationship="viewControllers" id="ezS-yF-ifv"/>

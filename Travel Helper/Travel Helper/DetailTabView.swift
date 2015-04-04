@@ -16,13 +16,15 @@ class DetailTabView: UITabBarController, UITabBarControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.delegate = self
+        
+//        let tbDetail2 = self.tabBar
+
         var item = tbDetail.items as [UITabBarItem]
         
-        let y = self.tbDetail.frame.height
-        item[0].image = RBResizeImage(UIImage(named:"Home-50.png")!, CGSize(width: y-10, height: y-10))
-        item[1].image = RBResizeImage(UIImage(named:"Music-50.png")!, CGSize(width: y-10, height: y-10))
-        item[2].image = RBResizeImage(UIImage(named:"Opened Folder Filled-50.png")!, CGSize(width: y-10, height: y-10))
+        let y = tbDetail.frame.height
+        item[0].image = RBResizeImage(UIImage(named:"Home-50.png")!, CGSize(width: y-20, height: y-20))
+        item[1].image = RBResizeImage(UIImage(named:"Music-50.png")!, CGSize(width: y-20, height: y-20))
+        item[2].image = RBResizeImage(UIImage(named:"Opened Folder Filled-50.png")!, CGSize(width: y-20, height: y-20))
         
     }
     

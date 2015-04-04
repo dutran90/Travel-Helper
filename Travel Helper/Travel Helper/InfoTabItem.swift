@@ -19,12 +19,10 @@ class InfoTabItem: UIViewController {
         
         let screenBound = UIScreen.mainScreen().bounds
         let screenSize = screenBound.size
-        let imgView = RBResizeImage(UIImage(named: "bg_ip6.jpg")!, screenSize)
+//        let imgView = RBResizeImage(UIImage(named: "bg_ip6.jpg")!, screenSize)
+//        
+//        self.view.backgroundColor = UIColor(patternImage: imgView)
         
-        self.view.backgroundColor = UIColor(patternImage: imgView)
-        
-        let a = DetailTabView()
-        print(a.checkNew)
         
         
     }

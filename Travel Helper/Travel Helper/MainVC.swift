@@ -29,7 +29,7 @@ class MainVC: UICollectionViewController {
         
         let screenBound = UIScreen.mainScreen().bounds
         let screenSize = screenBound.size
-        let imgView = RBResizeImage(UIImage(named: "bg_ip6.jpg")!, screenSize)
+        let imgView = RBResizeImage(UIImage(named: "bg_main.jpg")!, screenSize)
         
         self.view.backgroundColor = UIColor(patternImage: imgView)
     
@@ -222,7 +222,7 @@ class MainVC: UICollectionViewController {
         }
         
         if isConnectedToNetwork(){
-            self.performSegueWithIdentifier("tripDetailSegue", sender: 0)
+            self.performSegueWithIdentifier("addTripSegue", sender: 0)
         }else{
             let alertController = UIAlertController(title: "Please connect internet!", message:
                 nil, preferredStyle: UIAlertControllerStyle.Alert)
@@ -243,9 +243,6 @@ class MainVC: UICollectionViewController {
         }else{
             print("Add new trip!")
             
-            let detail = segue.destinationViewController as DetailTabView
-            
-            detail.checkNew = true
             
         }
     }

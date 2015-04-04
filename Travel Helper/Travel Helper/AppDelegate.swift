@@ -26,7 +26,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             )
         }
         UITabBar.appearance().selectedImageTintColor = UIColorFromRGB(10931807)
-//        UINavigationBar.appearance().se
+        
+        UINavigationBar.appearance().tintColor = UIColorFromRGB(10931807)
+        
+        
+        
         
         return true
     }
