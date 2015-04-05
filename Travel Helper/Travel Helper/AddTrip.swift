@@ -19,14 +19,20 @@ class AddTrip : UIViewController, MKMapViewDelegate, UITextFieldDelegate, CLLoca
     var locationManager: CLLocationManager!
     
     var tfFrom : String!
-    
     var tfTo : String!
+    
+    var originLat: Double!
+    var originLng: Double!
+    var destLat: Double!
+    var destLng: Double!
     
     var btnNext : UIButton!
     
     var titView = UIView()
     
     var routeDone = false
+    
+    
     
     override func viewDidLoad() {
         
@@ -173,13 +179,20 @@ class AddTrip : UIViewController, MKMapViewDelegate, UITextFieldDelegate, CLLoca
         
         alert.show()
         
-        let l = alert.valueForKey("_titleLabel") as UILabel
-        println(l.text)
         
     }
     
     func alertView(alertView: UIAlertView, didDismissWithButtonIndex buttonIndex: Int) {
         if buttonIndex == 0{
+            
+            // Clear old annotations
+            if let ex = mkTrip.annotations {
+                mkTrip.removeAnnotations(ex)
+            }
+            if let ey = mkTrip.overlays{
+                mkTrip.removeOverlays(ey)
+            }
+            
             tfFrom = alertView.textFieldAtIndex(0)?.text
             tfTo = alertView.textFieldAtIndex(1)?.text
             self.routeDone = true
@@ -214,18 +227,19 @@ class AddTrip : UIViewController, MKMapViewDelegate, UITextFieldDelegate, CLLoca
                     pointOfDestination.subtitle = directionInformation?.objectForKey("distance") as NSString
                     
                     var start_location = directionInformation?.objectForKey("start_location") as NSDictionary
-                    var originLat = start_location.objectForKey("lat")?.doubleValue
-                    var originLng = start_location.objectForKey("lng")?.doubleValue
+                    self.originLat = start_location.objectForKey("lat")?.doubleValue
+                    self.originLng = start_location.objectForKey("lng")?.doubleValue
                     
                     var end_location = directionInformation?.objectForKey("end_location") as NSDictionary
-                    var destLat = end_location.objectForKey("lat")?.doubleValue
-                    var destLng = end_location.objectForKey("lng")?.doubleValue
+                    self.destLat = end_location.objectForKey("lat")?.doubleValue
+                    self.destLng = end_location.objectForKey("lng")?.doubleValue
                     
-                    var coordOrigin = CLLocationCoordinate2D(latitude: originLat!, longitude: originLng!)
-                    var coordDesitination = CLLocationCoordinate2D(latitude: destLat!, longitude: destLng!)
+                    var coordOrigin = CLLocationCoordinate2D(latitude: self.originLat!, longitude: self.originLng!)
+                    var coordDesitination = CLLocationCoordinate2D(latitude: self.destLat!, longitude: self.destLng!)
                     
                     pointOfOrigin.coordinate = coordOrigin
                     pointOfDestination.coordinate = coordDesitination
+                    
                     if let web = self.mkTrip{
                         
                         dispatch_async(dispatch_get_main_queue()) {
@@ -233,16 +247,45 @@ class AddTrip : UIViewController, MKMapViewDelegate, UITextFieldDelegate, CLLoca
                             web.addAnnotation(pointOfOrigin)
                             web.addAnnotation(pointOfDestination)
                             web.setVisibleMapRect(boundingRegion!, animated: true)
+                            
+                            
+//                                        let amm = self.mkTrip.annotations
+//                                        self.mkTrip.showAnnotations(amm, animated: true)
+//                                        self.mkTrip.camera.altitude *= 1.0
+                            
+//                            //fit size map
+//                            var zoomRect = MKMapRectNull
+//                            var myLocationPointRect = MKMapRectMake(self.originLng, self.originLat, 0.0, 0.0)
+//                            var currentDestinationPointRect = MKMapRectMake(self.destLng, self.destLat, 0.0, 0.0)
+//                            
+//                            zoomRect = myLocationPointRect
+//                            zoomRect = MKMapRectUnion(zoomRect, currentDestinationPointRect)
+//                            
+//                            self.mkTrip.setVisibleMapRect(zoomRect, animated: true)
+                            var zoomRect: MKMapRect = MKMapRectNull
+                            var annotations = self.mkTrip.annotations as  [MKAnnotation]
+                            for annotation in annotations {
+                                var annotationPoint: MKMapPoint = MKMapPointForCoordinate(annotation.coordinate)
+                                var pointRect = MKMapRectMake(annotationPoint.x, annotationPoint.y, 0.1, 0.1) as  MKMapRect
+                                if (MKMapRectIsNull(zoomRect)) {
+                                    zoomRect = pointRect
+                                } else {
+                                    zoomRect = MKMapRectUnion(zoomRect, pointRect)
+                                }
+                            }
+                            self.mkTrip.setVisibleMapRect(zoomRect, edgePadding: UIEdgeInsetsMake(50, 50, 50, 50) , animated: true)
+                            
+                            }
+                            
                         }
                         
                     }
-                    
+    
                 }
+    
             }
 
-            
         }
-    }
 
     
     override func viewWillAppear(animated: Bool) {

@@ -256,11 +256,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="1kf-mJ-THW">
-                                <rect key="frame" x="0.0" y="56" width="600" height="600"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="1kf-mJ-THW">
+                                <rect key="frame" x="0.0" y="48" width="600" height="608"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1kf-mJ-THW" firstAttribute="height" secondItem="2QI-ZY-xZY" secondAttribute="height" id="8xC-nE-3Cp"/>
+                            <constraint firstItem="1kf-mJ-THW" firstAttribute="width" secondItem="2QI-ZY-xZY" secondAttribute="width" id="Hy2-2s-RBs"/>
+                        </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <nil key="simulatedBottomBarMetrics"/>
