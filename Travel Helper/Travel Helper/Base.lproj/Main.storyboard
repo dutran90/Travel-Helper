@@ -256,8 +256,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ms8-eY-Vo0">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="699"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="1kf-mJ-THW">
+                                <rect key="frame" x="0.0" y="56" width="600" height="600"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -265,7 +265,7 @@
                     <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="mkTrip" destination="ms8-eY-Vo0" id="Yz1-sx-t7F"/>
+                        <outlet property="mkTrip" destination="1kf-mJ-THW" id="SG5-YX-XGd"/>
                         <segue destination="PCz-g8-fzd" kind="show" identifier="addTripSegue1" id="ryI-IS-mtc"/>
                     </connections>
                 </viewController>
