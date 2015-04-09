@@ -32,6 +32,11 @@ class AddTrip : UIViewController, MKMapViewDelegate, UITextFieldDelegate, CLLoca
     
     var routeDone = false
     
+    var steps: NSArray!
+    
+    var cityName: String!
+    
+    var cities: NSMutableArray = []
     
     
     override func viewDidLoad() {
@@ -89,7 +94,21 @@ class AddTrip : UIViewController, MKMapViewDelegate, UITextFieldDelegate, CLLoca
     }
     
     func next(){
+        
+
+        
+//        for step in self.getArrayLatLngFromSteps(self.steps){
+//            
+//            self.getCityFromLatLng(step.valueForKey("lat") as Double, lng: step.valueForKey("lng") as Double)
+//            
+//            //                                        self.cities.addObject(self.cityName)
+//            
+//        }
+        
+        self.getCityFromLatLng(16.0544371, lng: 108.2030968)
+        
         self.performSegueWithIdentifier("addTripSegue1", sender: nil)
+        
     }
     
     func animateButtonRoute() {
@@ -195,7 +214,6 @@ class AddTrip : UIViewController, MKMapViewDelegate, UITextFieldDelegate, CLLoca
             
             tfFrom = alertView.textFieldAtIndex(0)?.text
             tfTo = alertView.textFieldAtIndex(1)?.text
-            self.routeDone = true
             
             tfFrom = tfFrom?.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
             tfTo = tfTo?.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
@@ -248,6 +266,7 @@ class AddTrip : UIViewController, MKMapViewDelegate, UITextFieldDelegate, CLLoca
                             web.addAnnotation(pointOfDestination)
                             web.setVisibleMapRect(boundingRegion!, animated: true)
                             
+                            self.steps = directionInformation?.valueForKey("steps") as NSArray
                             
 //                                        let amm = self.mkTrip.annotations
 //                                        self.mkTrip.showAnnotations(amm, animated: true)
@@ -276,7 +295,10 @@ class AddTrip : UIViewController, MKMapViewDelegate, UITextFieldDelegate, CLLoca
                             self.mkTrip.setVisibleMapRect(zoomRect, edgePadding: UIEdgeInsetsMake(50, 50, 50, 50) , animated: true)
                             
                             }
-                            
+                        
+                        self.routeDone = true
+                        
+                        self.navigationItem.rightBarButtonItem?.enabled = true
                         }
                         
                     }
@@ -285,7 +307,77 @@ class AddTrip : UIViewController, MKMapViewDelegate, UITextFieldDelegate, CLLoca
     
             }
 
+    }
+    
+    func getArrayLatLngFromSteps (steps: NSArray) -> NSMutableArray{
+        
+        var result: NSMutableArray = []
+        
+        for step in steps{
+            result.addObject(step.valueForKey("end_location")!)
+            result.addObject(step.valueForKey("start_location")!)
+//            result = result + step.valueForKey("end_location")
+//            result = result + step.valueForKey("start_location")
         }
+        
+        return result
+    }
+    
+    func getCityFromLatLng(lat: Double, lng: Double){
+        
+        let location: CLLocation = CLLocation(latitude: lat, longitude: lng)
+        let geoCoder = CLGeocoder()
+        
+        var result = ""
+        
+        geoCoder.reverseGeocodeLocation(location, completionHandler: {
+            (placeMarks, error) -> Void in
+            
+            let placeArray = placeMarks as [CLPlacemark]
+            
+            // Place details
+            var placeMark: CLPlacemark!
+            placeMark = placeArray[0]
+            
+//            // Address dictionary
+//            println(placeMark.addressDictionary)
+//            
+//            // Location name
+//            if let locationName = placeMark.addressDictionary["Name"] as? NSString {
+//                println("locName",locationName)
+//            }
+//            
+//            // Street address
+//            if let street = placeMark.addressDictionary["Thoroughfare"] as? NSString {
+//                println("street",street)
+//            }
+//            
+            // City
+            if let city = placeMark.addressDictionary["City"] as? NSString {
+                println("city",city)
+                self.getCity(city)
+            }
+            
+//            // Zip code
+//            if let zip = placeMark.addressDictionary["ZIP"] as? NSString {
+//                println("zip",zip)
+//            }
+//            
+//            // Country
+//            if let country = placeMark.addressDictionary["Country"] as? NSString {
+//                println("country",country)
+//            }
+            
+        })
+        
+    }
+    
+    func getCity(result: NSString){
+        
+        self.cities.addObject(result)
+    
+        
+    }
 
     
     override func viewWillAppear(animated: Bool) {
